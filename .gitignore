@@ -40,7 +40,10 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+
+# Linters caches
 .eslintcache
+.stylelintcache
 
 # System Files
 .DS_Store
