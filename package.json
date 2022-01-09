@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky install",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -34,12 +37,24 @@
     "@angular-eslint/template-parser": "13.0.1",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
+    "@angular/elements": "^13.1.1",
+    "@babel/core": "^7.16.7",
+    "@compodoc/compodoc": "^1.1.16",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/angular": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "@webcomponents/custom-elements": "^1.5.0",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-storybook": "^0.5.5",
     "husky": "^7.0.4",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
@@ -54,8 +69,8 @@
     "typescript": "~4.5.2"
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix",
+    "!(src/stories/**/*)*.ts": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown",
-    "*.css": "stylelint --cache --fix"
+    "!(src/stories/**/*)*.css": "stylelint --cache --fix"
   }
 }
