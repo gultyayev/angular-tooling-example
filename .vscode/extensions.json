@@ -1,4 +1,16 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    "angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ms-vsliveshare.vsliveshare",
+    "yzhang.markdown-all-in-one",
+    "quicktype.quicktype",
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-scss"
+  ]
 }
